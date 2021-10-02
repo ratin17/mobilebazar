@@ -35,17 +35,9 @@
     <!-- start #header -->
     <header id="header">
 
-        <!-- <div class="strip d-flex justify-content-between px-4 py-1 bg-light">
-        <p class="font-rale font-size-12 text-black-50 m-0">Jordan Calderon 430-985 Eleifend St. Duluth Washington 92611 (427) 930-5255</p>
-        <div class="font-rale font-size-14">
-            <a href="#" class="px-3 border-right border-left text-dark">Login</a>
-            <a href="#" class="px-3 border-right text-dark">Whishlist (0)</a>
-        </div>
-    </div> -->
-
         <!-- Primary Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow-lg bg-body rounded my-5 p-4">
-            <a class="navbar-brand" href="#">Mobile Bazar</a>
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg  fixed-top rounded mb-5 p-2" style="background-color:yellow">
+            <a class="navbar-brand" href="#"><span class="color-primary font-sumu" style="font-weight:1000;font-size:25px">Moblie Bazar</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -64,15 +56,15 @@
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="./contact-form/contact.php">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQs</a>
+                        <a class="nav-link" href="./FAQ/faq.html">FAQs</a>
                     </li>
                 </ul>
 
                 <div>
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="./log-res/login-res.html">Login</a>
                 </div>
 
                 <div>
@@ -89,6 +81,9 @@
             </div>
         </nav>
         <!-- !Primary Navigation -->
+
+
+
 
     </header>
     <!-- !start #header -->
