@@ -2,14 +2,26 @@
 
 //session_start();
 include('header.php');
-include('helper.php');
+//require('mysqli_connect.php');
 
-$user = array();
+if (!isset($_SESSION['user']['userID'])) {
+    echo "not found";
+    //header("location: login.php");
+}
 
+$userID = $_SESSION['user']['userID'];
 
-if (isset($_SESSION['userID'])) {
-    require('mysqli_connect.php');
-    $user = get_user_info($con, $_SESSION['userID']);
+$q = "SELECT * FROM user WHERE userID=" . $userID;
+
+$result = mysqli_query($con, $q);
+
+$noOfRow = mysqli_num_rows($result);
+
+if ($noOfRow) {
+
+    $user = mysqli_fetch_assoc($result);
+    //echo "<pre>";
+    //print_r($user);
 }
 
 ?>
@@ -43,6 +55,7 @@ if (isset($_SESSION['userID'])) {
         </div>
     </div>
 </section>
+
 
 <?php
 include "footer.php";

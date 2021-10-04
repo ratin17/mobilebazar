@@ -1,49 +1,52 @@
 <?php
+//session_start();
+//$error = array();
+
 //require('mysqli_connect.php');
-$error = array();
 
-$email = validate_input_email($_POST['email']);
-if (empty($email)) {
-    $error[] = "You forgot to enter your Email";
-}
 
-$password = validate_input_text($_POST['password']);
-if (empty($password)) {
-    $error[] = "You forgot to enter your password";
-}
+$email = $_POST['email'];
 
-if (empty($error)) {
-    // sql query
-    $query = "SELECT userID, firstName, lastName, email, password, profileImage FROM user WHERE email=?";
-    $q = mysqli_stmt_init($con);
-    mysqli_stmt_prepare($q, $query);
 
-    // bind parameter
-    mysqli_stmt_bind_param($q, 's', $email);
-    //execute query
-    mysqli_stmt_execute($q);
+$password = $_POST['password'];
 
-    $result = mysqli_stmt_get_result($q);
 
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
-    if (!empty($row)) {
-        // verify password
-        if (password_verify($password, $row['password'])) {
 
-            //echo "success!";
-            // start a new session
-            session_start();
 
-            // creat
-            $_SESSION['userID'] = mysqli_insert_id($con);
 
-            header("location: user-profile.php");
-            exit();
-        }
-    } else {
-        print "You are not a member please register!";
+
+// sql query
+$query = "SELECT * FROM user WHERE email='" . $email . "'";
+
+$result = mysqli_query($con, $query);
+
+$noOfRow = mysqli_num_rows($result);
+
+
+
+if ($noOfRow) {
+
+    $row = mysqli_fetch_assoc($result);
+    print_r($row);
+
+    if (password_verify($password, $row['password'])) {
+
+        $userData = array(
+            "userID" => $row['userID'],
+            "profileImage" => $row['profileImage'],
+            "firstName" => $row['firstName'],
+            "lastName" => $row['lastName'],
+            "email" => $row['email']
+        );
+        session_start();
+        $_SESSION['user'] = $userData;
+        header("location: user-profile.php");
+        exit();
     }
-} else {
-    echo "Please Fill out email and password to login!";
+}
+
+//else
+else {
+    print "You are not a member please register!";
 }

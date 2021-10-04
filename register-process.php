@@ -1,10 +1,4 @@
 <?php
-//require('functions.php');
-
-
-//require('database/DBController.php');
-
-//$con = new mysqli($host, $user, $password, $database);
 
 require('helper.php');
 // error variable.
@@ -41,6 +35,8 @@ $profileImage = upload_profile('./assets/profile/', $files);
 if (empty($error)) {
     // register a new user
     $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
+
+    //********************************************gets con */
     require('mysqli_connect.php');
 
     // make a query
@@ -61,11 +57,10 @@ if (empty($error)) {
 
     if (mysqli_stmt_affected_rows($q) == 1) {
 
-        //echo "success!";
         // start a new session
         //session_start();
 
-        // creat
+        // create session variable
         //$_SESSION['userID'] = mysqli_insert_id($con);
 
         header('location: login.php');

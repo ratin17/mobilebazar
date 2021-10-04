@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="d-flex justify-content-center">
                         <img class="camera-icon" src="./assets/logres/cam.svg" alt="camera">
                     </div>
-                    <img src="./assets/logres/beard.png" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
+                    <img src="./assets/profile/beard.png" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
                     <small class="form-text text-black-50">Choose Image</small>
                     <input type="file" form="reg-form" class="form-control-file" name="profileUpload" id="upload-profile">
                 </div>
