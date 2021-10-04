@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,12 +70,22 @@
                 </ul>
 
                 <div>
-                    <a class="nav-link" href="logres.php">Login</a>
+                    <a class="nav-link" href="register.php">Login</a>
                 </div>
 
                 <div>
-                    <a class="nav-link" href="#">Whishlist(0)</a>
+                    <a class="nav-link" href="logout.php">Logout</a>
                 </div>
+
+
+
+
+                <form action="#" class="font-size-14 font-rale">
+                    <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
+                        <span class="font-size-16 px-2 text-white"><i class="fas fa-user"></i></span>
+
+                    </a>
+                </form>
 
 
                 <form action="#" class="font-size-14 font-rale">
