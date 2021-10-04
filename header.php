@@ -11,6 +11,8 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
+
     <!-- Owl-carousel CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha256-kksNxjDRxd/5+jGurZUJd1sdR2v+ClrCl3svESBaJqw=" crossorigin="anonymous" />
@@ -53,10 +55,10 @@
                         <a class="nav-link" href="#">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="team.php">Our Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contact-form/contact.php">Contact</a>
+                        <a class="nav-link" href="contactUs.php">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./FAQ/faq.html">FAQs</a>
@@ -64,7 +66,7 @@
                 </ul>
 
                 <div>
-                    <a class="nav-link" href="./log-res/login-res.html">Login</a>
+                    <a class="nav-link" href="logres.php">Login</a>
                 </div>
 
                 <div>
