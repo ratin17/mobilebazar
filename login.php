@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+//session_start();
 // header.php
 include('header.php');
 include "helper.php";
@@ -25,12 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="col-lg-4 offset-lg-2">
             <div class="text-center pb-5">
                 <h1 class="login-title text-dark">Login</h1>
-                <p class="p-1 m-0 font-ubuntu text-black-50">Login and enjoy additional features</p>
-                <span class="font-ubuntu text-black-50">Create a new <a href="register.php">account</a></span>
+                <p class="p-1 m-0 text-black-50">Login and purchase mobiles from Mobile Bazar</p>
+                <span class="font-ubuntu text-black-50">Create a new <a href="register.php">Mobile Bazar account</a></span>
             </div>
             <div class="upload-profile-image d-flex justify-content-center pb-5">
                 <div class="text-center">
-                    <img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : './assets/profile/beard.png'; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
+                    <img src="<?php echo isset($user['profileImage']) ? $user['profileImage'] : './assets/logres/beard.png'; ?>" style="width: 200px; height: 200px" class="img rounded-circle" alt="profile">
                 </div>
             </div>
             <div class="d-flex justify-content-center">

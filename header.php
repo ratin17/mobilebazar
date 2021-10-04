@@ -70,7 +70,7 @@ session_start();
                 </ul>
 
                 <div>
-                    <a class="nav-link" href="register.php">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </div>
 
                 <div>
@@ -81,7 +81,7 @@ session_start();
 
 
                 <form action="#" class="font-size-14 font-rale">
-                    <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
+                    <a href="user-profile.php" class="py-2 rounded-pill color-primary-bg">
                         <span class="font-size-16 px-2 text-white"><i class="fas fa-user"></i></span>
 
                     </a>
