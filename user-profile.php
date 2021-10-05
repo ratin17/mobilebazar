@@ -44,10 +44,12 @@ if ($noOfRow) {
                 </div>
 
                 <div class="user-info px-3">
-                    <ul class="font-ubuntu navbar-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-link"><b>User Id: </b><span><?php echo isset($user['userID']) ? $user['userID'] : ''; ?></span></li>
                         <li class="nav-link"><b>First Name: </b><span><?php echo isset($user['firstName']) ? $user['firstName'] : ''; ?></span></li>
                         <li class="nav-link"><b>Last Name: </b><span><?php echo isset($user['lastName']) ? $user['lastName'] : ''; ?></span></li>
                         <li class="nav-link"><b>Email: </b><span><?php echo isset($user['email']) ? $user['email'] : ''; ?></span></li>
+                        <li class="nav-link"><b>Member Till: </b><span><?php echo isset($user['registerDate']) ? $user['registerDate'] : ''; ?></span></li>
                     </ul>
                 </div>
 
@@ -55,6 +57,11 @@ if ($noOfRow) {
         </div>
     </div>
 </section>
+
+<?php
+/*  include banner area  */
+include('Template/my-cart.php');
+?>
 
 
 <?php

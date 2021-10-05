@@ -37,7 +37,7 @@ if (empty($error)) {
     $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
 
     //********************************************gets con */
-    require('mysqli_connect.php');
+    //require('mysqli_connect.php');
 
     // make a query
     $query = "INSERT INTO user (userID, firstName, lastName, email, password, profileImage, registerDate )";

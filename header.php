@@ -39,10 +39,10 @@ session_start();
 <body>
 
     <!-- start #header -->
-    <header id="header">
+    <header id="header" class="mb-5">
 
         <!-- Primary Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light shadow-lg  fixed-top rounded mb-5 p-2" style="background-color:yellow">
+        <nav class="navbar navbar-expand-lg navbar-light shadow-lg  fixed-top rounded mb-5 p-1" style="background-color:yellow">
             <a class="navbar-brand" href="#"><span class="color-primary font-sumu" style="font-weight:1000;font-size:25px">Moblie Bazar</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -91,7 +91,19 @@ session_start();
                 <form action="#" class="font-size-14 font-rale">
                     <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
                         <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php echo count($product->getData('cart')); ?></span>
+                        <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php
+
+                                                                                $query = "SELECT * FROM cart WHERE user_id=" . $_SESSION['user']['userID'];
+
+                                                                                $result = mysqli_query($con, $query);
+
+                                                                                $noOfRow = mysqli_num_rows($result);
+
+                                                                                echo $noOfRow;
+
+
+
+                                                                                ?></span>
                     </a>
                 </form>
             </div>
