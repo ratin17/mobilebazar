@@ -53,10 +53,10 @@ session_start();
                         <a class="nav-link" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Category</a>
+                        <a class="nav-link" href="./category.php">Category</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link" href="./allProducts.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="team.php">Our Team</a>

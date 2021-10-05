@@ -3,85 +3,40 @@
         <h1 class="heading1">OUR TEAM</h1>
         <div class="row">
 
-            <div class="col-md-3 profile text-center">
-                <div class="team-img-box">
-                    <img src="./assets/team/1.jpg" class="img-responsive">
-                    <ul>
-                        <a href="#">
-                            <li><i class="fa fa-facebook"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-twitter"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-linkedin"></i></li>
-                        </a>
-                    </ul>
-                </div>
-                <h2>Mosiur Rahman</h2>
-                <h3>Founder/CEO</h3>
-                <p>Doing impossible is my passion.</p>
-            </div>
 
-            <div class="col-md-3 profile text-center">
-                <div class="team-img-box">
-                    <img src="./assets/team/2.jpg" class="img-responsive">
-                    <ul>
-                        <a href="#">
-                            <li><i class="fa fa-facebook"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-twitter"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-linkedin"></i></li>
-                        </a>
-                    </ul>
-                </div>
-                <h2>Mehrab Ratin</h2>
-                <h3>Business Head</h3>
-                <p>Doing impossible is my passion.</p>
-            </div>
+            <?php
+            $query = "SELECT * FROM team";
+            $result = mysqli_query($con, $query);
+            //$noOfRow = mysqli_num_rows($result);
+            foreach ($result as $item) :
+            ?>
 
-            <div class="col-md-3 profile text-center">
-                <div class="team-img-box">
-                    <img src="./assets/team/3.jpg" class="img-responsive">
-                    <ul>
-                        <a href="#">
-                            <li><i class="fa fa-facebook"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-twitter"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-linkedin"></i></li>
-                        </a>
-                    </ul>
+                <div class="col-md-6 profile text-center">
+                    <div class="team-img-box">
+                        <img src="<?php echo $item['memberImage'] ?>" class="img-responsive">
+                        <ul>
+                            <a href="#">
+                                <li><i class="fa fa-facebook"></i></li>
+                            </a>
+                            <a href="#">
+                                <li><i class="fa fa-twitter"></i></li>
+                            </a>
+                            <a href="#">
+                                <li><i class="fa fa-linkedin"></i></li>
+                            </a>
+                        </ul>
+                    </div>
+                    <h2><?php echo $item['memberName'] ?></h2>
+                    <h2><?php echo $item['memberTitle'] ?></h2>
+                    <h3><?php echo $item['memberEmail'] ?></h3>
+                    <p>Student of Ahsanullah University of Science and Technology</p>
                 </div>
-                <h2>Swapnil Basher</h2>
-                <h3>Marketing Head</h3>
-                <p>Doing impossible is my passion.</p>
-            </div>
 
-            <div class="col-md-3 profile text-center">
-                <div class="team-img-box">
-                    <img src="./assets/team/3.jpg" class="img-responsive">
-                    <ul>
-                        <a href="#">
-                            <li><i class="fa fa-facebook"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-twitter"></i></li>
-                        </a>
-                        <a href="#">
-                            <li><i class="fa fa-linkedin"></i></li>
-                        </a>
-                    </ul>
-                </div>
-                <h2>Farhana Khanom</h2>
-                <h3>UI/UX Design</h3>
-                <p>Doing impossible is my passion.</p>
-            </div>
+            <?php
+            endforeach;
+            ?>
+
+
 
         </div>
     </div>
