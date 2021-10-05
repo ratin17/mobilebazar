@@ -1,5 +1,15 @@
 <!--   product  -->
 <?php
+
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    if (isset($_POST['top_sale_submit'])) {
+        // call method addToCart
+        $Cart->addToCart($_POST['user_id'], $_POST['item_id']);
+    }
+}
+
+
 $item_id = $_GET['item_id'] ?? 1;
 foreach ($product->getData() as $item) :
     if ($item['item_id'] == $item_id) :
@@ -69,7 +79,7 @@ foreach ($product->getData() as $item) :
                                     <div class="font-size-20 my-2 color-second">
                                         <span class="fas fa-truck  border p-3 rounded-pill"></span>
                                     </div>
-                                    <a href="#" class="font-rale font-size-12">Daily Tuition <br>Deliverd</a>
+                                    <a href="#" class="font-rale font-size-12">Mobile Bazar <br>Qurier</a>
                                 </div>
                                 <div class="return text-center mr-5">
                                     <div class="font-size-20 my-2 color-second">
@@ -84,7 +94,7 @@ foreach ($product->getData() as $item) :
 
                         <!-- order-details -->
                         <div id="order-details" class="font-rale d-flex flex-column text-dark">
-                            <small>Delivery by : Mar 29 - Apr 1</small>
+                            <small>Delivery by : <span><?php echo date('d/m/Y', strtotime('+7 days')); ?></span></small>
                             <small>Sold by <a href="#">Daily Electronics </a>(4.5 out of 5 | 18,198 ratings)</small>
                             <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Deliver to Customer - 424201</small>
                         </div>
@@ -124,7 +134,7 @@ foreach ($product->getData() as $item) :
                                 <div class="font-rubik border p-2">
                                     <button id="storage1" class="btn p-0 font-size-14">4GB RAM</button>
                                 </div>
-                                <div class="font-rubik border p-2">
+                                <div class="font-rubik border p-2" style="background-color:aqua">
                                     <button id="storage2" class="btn p-0 font-size-14">6GB RAM</button>
                                 </div>
                                 <div class="font-rubik border p-2">

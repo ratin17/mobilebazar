@@ -49,7 +49,7 @@ if ($noOfRow) {
                         <li class="nav-link"><b>First Name: </b><span><?php echo isset($user['firstName']) ? $user['firstName'] : ''; ?></span></li>
                         <li class="nav-link"><b>Last Name: </b><span><?php echo isset($user['lastName']) ? $user['lastName'] : ''; ?></span></li>
                         <li class="nav-link"><b>Email: </b><span><?php echo isset($user['email']) ? $user['email'] : ''; ?></span></li>
-                        <li class="nav-link"><b>Member Till: </b><span><?php echo isset($user['registerDate']) ? $user['registerDate'] : ''; ?></span></li>
+                        <li class="nav-link"><b>Member Since: </b><span><?php echo isset($user['registerDate']) ? $user['registerDate'] : ''; ?></span></li>
                     </ul>
                 </div>
 

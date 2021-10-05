@@ -69,45 +69,60 @@ session_start();
                     </li>
                 </ul>
 
-                <div>
-                    <a class="nav-link" href="login.php">Login</a>
-                </div>
-
-                <div>
-                    <a class="nav-link" href="logout.php">Logout</a>
-                </div>
 
 
 
 
-                <form action="#" class="font-size-14 font-rale">
-                    <a href="user-profile.php" class="py-2 rounded-pill color-primary-bg">
-                        <span class="font-size-16 px-2 text-white"><i class="fas fa-user"></i></span>
-
-                    </a>
-                </form>
+                <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
+                ?>
 
 
-                <form action="#" class="font-size-14 font-rale">
-                    <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
-                        <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
-                        <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php
+                    <div>
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </div>
 
-                                                                                $query = "SELECT * FROM cart WHERE user_id=" . $_SESSION['user']['userID'];
+                    <form action="#" class="font-size-14 font-rale">
+                        <a href="user-profile.php" class="py-2 rounded-pill color-primary-bg">
+                            <span class="font-size-16 px-2 text-white"><i class="fas fa-user"></i></span>
 
-                                                                                $result = mysqli_query($con, $query);
-
-                                                                                $noOfRow = mysqli_num_rows($result);
-
-                                                                                echo $noOfRow;
+                        </a>
+                    </form>
 
 
+                    <form action="#" class="font-size-14 font-rale">
+                        <a href="cart.php" class="py-2 rounded-pill color-primary-bg">
+                            <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
+                            <span class="px-3 py-2 rounded-pill text-dark bg-light"><?php
 
-                                                                                ?></span>
-                    </a>
-                </form>
+                                                                                    $query = "SELECT * FROM cart WHERE user_id=" . $_SESSION['user']['userID'];
+
+                                                                                    $result = mysqli_query($con, $query);
+
+                                                                                    $noOfRow = mysqli_num_rows($result);
+
+                                                                                    echo $noOfRow;
+
+
+
+                                                                                    ?></span>
+                        </a>
+                    </form>
+
+
+
+                <?php } else { ?>
+                    <div>
+                        <a class="nav-link" href="login.php">Login</a>
+                    </div>
+
+                <?php } ?>
+
+
+
             </div>
         </nav>
+
+
         <!-- !Primary Navigation -->
 
 

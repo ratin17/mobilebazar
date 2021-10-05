@@ -11,11 +11,11 @@
             foreach ($result as $item) :
             ?>
 
-                <div class="col-md-6 profile text-center">
+                <div class="col-md-4 profile text-center border">
                     <div class="team-img-box">
-                        <img src="<?php echo $item['memberImage'] ?>" class="img-responsive">
+                        <img src="<?php echo $item['memberImage'] ?>" class="img-responsive w-100" style="height:350px">
                         <ul>
-                            <a href="#">
+                            <a href=" #">
                                 <li><i class="fa fa-facebook"></i></li>
                             </a>
                             <a href="#">
