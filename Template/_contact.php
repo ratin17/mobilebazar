@@ -1,10 +1,7 @@
 <section class="contact">
     <div class="content">
         <h2>Contact Us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Ea nulla veniam obcaecati dolorem consequuntur,
-            quidem quibusdam doloribus laudantium eligendi provident voluptates,
-            officiis laborum atque dicta eaque, consectetur expedita explicabo at.</p>
+        <p>tell us about what you want to tell. give use suggestions for anything. We will be eagrely reding your messages</p>
     </div>
 
     <div class="contact-container">
@@ -13,7 +10,7 @@
                 <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Address</h3>
-                    <p>696, Boro Moghbazar<br>Dhaka-1210</p>
+                    <p>Love Road,tejgioan, Dhaka<br>Dhaka-1210</p>
                 </div>
             </div>
             <div class="box">
@@ -27,7 +24,7 @@
                 <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
                 <div class="text">
                     <h3>Email</h3>
-                    <p>mosiur.n00b@gmail.com</p>
+                    <p>mobile.bazar.24.7@gmail.com</p>
                 </div>
             </div>
         </div>

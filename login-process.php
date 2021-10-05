@@ -28,7 +28,7 @@ $noOfRow = mysqli_num_rows($result);
 if ($noOfRow) {
 
     $row = mysqli_fetch_assoc($result);
-    print_r($row);
+    //print_r($row);
 
     if (password_verify($password, $row['password'])) {
 
@@ -43,10 +43,14 @@ if ($noOfRow) {
         $_SESSION['user'] = $userData;
         header("location: user-profile.php");
         exit();
+    } else {
+
+        header("location: oopps.php");
     }
 }
 
 //else
 else {
-    print "You are not a member please register!";
+
+    header("location: oopps.php");
 }

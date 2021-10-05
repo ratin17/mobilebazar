@@ -441,7 +441,7 @@ button, button:focus {
 
 #register, #login-form {
   padding: 5% 0;
-  background: url("assets/logres/bg1.png") no-repeat;
+  background: url("./assets/logres/bg1.png") no-repeat;
   background-size: cover;
 }
 
